@@ -1,30 +1,41 @@
-# CapacityLogReg
+# Statistical Learning based Estimation of Mutual Information (SLEMI)
 
-The package CapacityLogReg is designed to estimate channel capacity between finite state input and multidimensional output from experimental data. For efficient computations, it uses iterative algorithm based on logistic regression.  The core function `capacity_logreg_main()` is the basic interface to all functionalities provided in the package. A comprehensive documentation is available on [github.io](https://github.io/) and in directory [`docs/CapacityLogReg_documentation.pdf`](https://github.com/TJetka/LogRegCapacity/blob/master/docs/CapacityLogReg_documentation.pdf).
+The R package SLEMI is designed to estimate channel capacity between finite state input and multidimensional output from experimental data. For efficient computations, it uses iterative algorithm based on logistic regression.  The core function `capacity_logreg_main()` is the basic interface to all functionalities provided in the package. A comprehensive documentation is available on [github.io](https://github.io/) and in directory [`docs/SLEMI_documentation.pdf`](https://github.com/TJetka/LogRegCapacity/blob/master/docs/SLEMI_documentation.pdf).
 
 ## Setup
 
 ### Requirements - Hardware
-  + A 32 or 64 bit OS (recommended: 64bit)
-  + 1GHz processor (recommended: multicore for comprehesive analysis)
-  + 1GB MB RAM (recommended: 2GB+, depends on the size of experimental data)
+  + A 32 or 64 bit processor (recommended: 64bit)
+  + 1GHz processor (recommended: multicore for a comprehensive analysis)
+  + 2GB MB RAM (recommended: 4GB+, depends on the size of experimental data)
 
 ### Requirements - Software
-The main requirement is the installation of the R environment (version: >= 3.2), which can be obtained from [R project webstie](https://www.r-project.org). The use of a dedicated IDE, e.g. [RStudio](https://www.rstudio.com) is recommended.
+The main software requirement is the installation of the R environment (version: >= 3.2), which can be downloaded from [R project webstie](https://www.r-project.org) and is distributed for all common operating systems.  We tested the package in R environment installed on Windows 7, 10; Mac OS X 10.11 - 10.13 and Ubuntu 18.04 with no significant differences in the performance. The use of a dedicated Integrated development environment (IDE), e.g. [RStudio](https://www.rstudio.com) is recommended. 
 
-Apart from base installation of R, CapacityLogReg requires following packages:
-1. for estimation
+Apart from base installation of R, SLEMI requires following packages:
+
+1. for instalation 
+
+  + devtools
+  
+2. for estimation
+  
   + e1071
+  + Hmisc
   + nnet
   + glmnet
-  + mvtnorm
   + caret
   + doParallel (if parallel computation are needed)
-2. for visualisation
+  
+3. for visualisation
+
   + ggplot2
   + ggthemes
   + gridExtra
-3. data handling
+  + corrplot
+  
+4. for data handling
+
   + reshape2
   + stringr
   + plyr
@@ -36,12 +47,11 @@ in the R console.
 
 ### Installation
 
-In order to install the package use command
+In order to install the package use following commands in R's console
+
 > `# install_packages("devtools") # run if not installed`
-
 > `library(devtools)`
-
-> `install_github("TJetka/CapacityLogReg")`
+> `install_github("TJetka/SLEMI")`
 
 
 ### Docker
@@ -81,7 +91,7 @@ For convenience of further analysis, this list is saved in `output_path` directo
 
 ## Examples
 
-Additional examples of using package with some background on information theory is given in [`testing_procedures/CapacityLogReg_testing.pdf`](https://github.com/TJetka/LogRegCapacity/blob/master/testing_procedures/CapacityLogReg_testing.pdf) and implemented in script [`testing_procedures/testing.R`](https://github.com/TJetka/LogRegCapacity/blob/master/testing_procedures/testing.R). Codes used in publication are accessible from [`testing_procedures/paper_MP.R`](https://github.com/TJetka/LogRegCapacity/blob/master/testing_procedures/paper_MP.R) and [`testing_procedures/paper_SI.R`](https://github.com/TJetka/LogRegCapacity/blob/master/testing_procedures/paper_SI.R) respectively.
+Additional examples of using package with some background on information theory is given in [`testing_procedures/SLEMI_testing.pdf`](https://github.com/TJetka/LogRegCapacity/blob/master/testing_procedures/SLEMI_testing.pdf) and implemented in script [`testing_procedures/testing.R`](https://github.com/TJetka/LogRegCapacity/blob/master/testing_procedures/testing.R). Codes used in publication are accessible from [`testing_procedures/paper_MP.R`](https://github.com/TJetka/LogRegCapacity/blob/master/testing_procedures/paper_MP.R) and [`testing_procedures/paper_SI.R`](https://github.com/TJetka/LogRegCapacity/blob/master/testing_procedures/paper_SI.R) respectively.
 
 ### Datasets
 
@@ -129,8 +139,8 @@ Please mail t.jetka at gmail.com in case of any bugs, problems and questions reg
 ## Reference
 
 Please cite
-> Jetka et al., Estimator of channel capacity using statistical learning, 2018 (to be published)
+> Jetka et al., Information-theoretic analysis of multivariate signaling responses using SLEMI, 2018 (to be published)
 
 ## Licence
 
-CapacityLogReg is released under the GNU licence and is freely available. A comprehensive documentation is available on [github.io](https://github.io/) and in directory [`docs/CapacityLogReg_documentation.pdf`](https://github.com/TJetka/LogRegCapacity/blob/master/docs/CapacityLogReg_documentation.pdf).
+SLEMI is released under the GNU licence and is freely available. A comprehensive documentation is available on [github.io](https://github.io/) and in directory [`docs/SLEMI_documentation.pdf`](https://github.com/TJetka/LogRegCapacity/blob/master/docs/SLEMI_documentation.pdf).

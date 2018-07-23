@@ -9,7 +9,7 @@
 #' @param lr_maxit is the number of iteration of iterative algorithm of logistic regression
 #' @param maxNWts is the maximum acceptable number of weights in logistic regression algorithm - the higher, the slower the computations
 #' @param model_out is the logical indicating if the calculated logisitc regression model should be included in output list
-#' @keywords internal
+#' @export
 #' @return a list with three elements:
 #' \itemize{
 #' \item output$prob_matr - confusion matrix of logistic regression predictions
@@ -19,7 +19,7 @@
 prob_discr_pairwise<-function(dataRaw,
                               signal="signal",response="response",side_variables=NULL,
                               formula_string=NULL,
-                              output_path=NULL,
+                              output_path=NULL, scale=TRUE,
                               model_out=TRUE,
                               lr_maxit=1000,MaxNWts = 5000){
   
@@ -32,7 +32,10 @@ prob_discr_pairwise<-function(dataRaw,
   # checking assumptions
   if (is.null(output_path)) { 
     warning('path is not defined. Graphs and RDS file will not be saved.')
+  } else {
+    dir.create(output_path,recursive = TRUE)
   }
+  
   if (!is.data.frame(dataRaw)) {
     stop('data is not in data.frame format')
   }
@@ -152,14 +155,17 @@ prob_discr_pairwise<-function(dataRaw,
       prob_matrix[is,is]=1
   }
   
-  col2 <- colorRampPalette(c("#67001F", "#B2182B", "#D6604D", "#F4A582",
+  row.names(prob_matrix)<-chosen_stim
+  colnames(prob_matrix)<-chosen_stim
+  
+  col2 <- grDevices::colorRampPalette(c("#67001F", "#B2182B", "#D6604D", "#F4A582",
                              "#FDDBC7",
                              "#67001F", "#B2182B", "#D6604D", "#F4A582",
                              "#FDDBC7","#FFFFFF", "#D1E5F0", "#92C5DE",
                              "#4393C3", "#2166AC", "#053061"))
   
   pdf(paste0(output_path,"/plot_probs_discr.pdf"),height=6,width=6)
-    corrplot(prob_matrix,type = "upper", method = "pie",cl.lim = c(0.5, 1),col=col2(40), diag=FALSE)
+    corrplot::corrplot(prob_matrix,type = "upper", method = "pie",cl.lim = c(0.5, 1),col=col2(40), diag=FALSE)
   dev.off()
   
   output=list()

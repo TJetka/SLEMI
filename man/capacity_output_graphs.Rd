@@ -4,8 +4,8 @@
 \alias{capacity_output_graphs}
 \title{Plotting output of capacity estimation}
 \usage{
-capacity_output_graphs(data, signal, response, side_variables, cc_output, path,
-  height = 4, width = 6)
+capacity_output_graphs(data, signal, response, side_variables, cc_output,
+  output_path, height = 4, width = 6)
 }
 \arguments{
 \item{data}{is a data.frame object}
@@ -18,11 +18,11 @@ capacity_output_graphs(data, signal, response, side_variables, cc_output, path,
 
 \item{cc_output}{a list that is the output of capacity_logreg_algorithm function}
 
-\item{path}{character giving the directory, where graphs should be saved}
-
 \item{height}{integer indicating the height of a single plot}
 
 \item{width}{integer indicating the width of a single plot}
+
+\item{path}{character giving the directory, where graphs should be saved}
 }
 \description{
 INPUT:

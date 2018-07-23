@@ -1,14 +1,25 @@
-#' Plotting output of capacity estimation
+#' Plotting output of capacity estimation and additional exploratory graphs.
 #' 
 #' INPUT:
 #' @param data is a data.frame object
 #' @param signal is a character object that indicates columns of data that should be treated as channel's input
 #' @param response is a character vector that indicates columns of data that should be treated as channel's output
 #' @param side_variables is a character vector that indicates side variables' columns of data
-#' @param cc_output a list that is the output of capacity_logreg_algorithm function
+#' @param cc_output a list that is a standard output of capacity_logreg_algorithm function
 #' @param path character giving the directory, where graphs should be saved
 #' @param height integer indicating the height of a single plot
 #' @param width integer indicating the width of a single plot
+#' @return A list with ggplot or gtable object. Each plot is also saved in `output_path` directory in separate pdfs files which include:
+#' \itemize{
+#' \item MainPlot.pdf - a simple summary plot with basic distribution visualization and capacity estimate
+#' \item MainPlot_full.pdf - a comprehensive summary plot with distribution visualization and capacity estimate
+#' \item capacity.pdf - a diagram presenting the capacity estimates
+#' \item io_relation.pdf - a graph with input-output relation
+#' \item kdensities.pdf - kernel density estimator of data distribution
+#' \item histograms.pdf - histograms of data
+#' \item boxplots.pdf - boxplots of data
+#' \item violin.pdf - violin plots of data
+#' }
 #' @keywords data.frame
 #' @examples 
 #' 

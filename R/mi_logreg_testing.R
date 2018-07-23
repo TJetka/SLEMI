@@ -33,7 +33,7 @@
 #' @export
 #' @examples 
 #' 
-capacity_logreg_testing<-function(data,signal="signal",response="response",side_variables=NULL,
+mi_logreg_testing<-function(data,signal="signal",response="response",side_variables=NULL,
                                   lr_maxit=1000,MaxNWts = 5000,
                                   formula_string=NULL,
                                   glmnet_algorithm=FALSE,dataMatrix=NULL, 

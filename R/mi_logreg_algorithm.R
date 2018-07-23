@@ -78,6 +78,11 @@ mi_logreg_algorithm<-function(data,
     #Debugging:
     print("Iterative algorihtm starting")
     
+    prob_ratio=(p0[1]/p0)*(pinput/pinput[1])
+    temp_val <- prob_lr*t(replicate(nrow(prob_lr),prob_ratio))
+    prob_lr <- data.frame(t(apply(temp_val,1,function(x){ x/sum(x) })))
+    colnames(prob_lr) <- signal_levels
+    
     C_mc<-sapply(signal_levels,function(x) {
         mc_values=log(prob_lr[[x]][cell_id[[x]] ])
         mean(mc_values[is.finite(mc_values)])

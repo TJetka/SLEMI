@@ -1,10 +1,15 @@
 ### ### ### ### ### ### ### ### ### ### ### ### 
 ###                                         ###
 ### title: Script for testing procedures    ###
-###         of CapacityLogReg package       ###
-### author: Tomasz Jetka                    ###
-### date: 15.06.2018                        ###
-### XXXX submission                         ###
+###         of SLEMI R package              ###
+### author: T. Jetka, K. Nienaltowski,      ###
+###         T. Winarski, M. Komorowski      ###
+### date: 22.07.2018                        ###
+### Submission of manuscript:               ###
+###                                         ###
+### Information-theoretic analysis of       ###
+### multivariate signaling responses        ###
+### using SLEMI                             ###
 ###                                         ###
 ### ### ### ### ### ### ### ### ### ### ### ### 
 
@@ -17,9 +22,9 @@
 ### 3) Validation - replicates Fig. S3 - shows the performance of our method in four examples of simple channels
 ## In default mode (10 repetition of data sampling), running Validation section takes 1 hour, 
 ## similarly computations in Comparison section also take approximately 1 hour.
-## with a single core. Set number of cores for parallel processing in line 71.
+## with a single core. Set number of cores for parallel processing in line 76.
 ##
-## For a graphs like in SI (full diagnostic tests) set variable 'analysis_type' in line 72 to value 'full'
+## For a graphs like in SI (full diagnostic tests) set variable 'analysis_type' in line 77 to value 'full'
 ###
 ### Lines, where the activity of the user is needed, are emphasised with "FOR USER:"
 ### 
@@ -48,7 +53,7 @@ require("DEoptimR") # install.packages("DEoptimR")
 require("TDA")      # install.packages("TDA")
 
 
-## 0. Install CapacityLogReg package by:
+## 0. Install SLEMI package by:
 # install.packages("devtools") # if not installed
 # library(devtools)
 # install_github("TJetka/LogRegCapacity")
@@ -60,7 +65,7 @@ setwd("D:/IPPT/Testing/Test2/")
 
 #1.2 Loading neccessary libraries
 source("aux_functions.R")
-library(CapacityLogReg)
+library(SLEMI)
 aux_loadPackages(c("reshape2","ggplot2","stringr","doParallel","gridExtra"))
 
 #1.3 Create output directory
@@ -163,11 +168,11 @@ for (i_output in i_outputs){
     OutputListT[[as.character(i_output)]][[as.character(i_n)]]=list()
     
     
-    ##CapacityLogReg algorithm
+    ##SLEMI algorithm
     t1=proc.time()
     cl=parallel::makeCluster(boot_cores)
     doParallel::registerDoParallel(cl)
-    OutList=foreach::foreach(i=1:boot_num,.packages = c("CapacityLogReg","mvtnorm","FNN","TDA","DEoptimR")) %do% {
+    OutList=foreach::foreach(i=1:boot_num,.packages = c("SLEMI","mvtnorm","FNN","TDA","DEoptimR")) %do% {
       
       tempdata = data.frame(signal = c(t(replicate(i_n,LETTERS[1:classes_num]))) ,
                             rbind(
@@ -195,7 +200,7 @@ for (i_output in i_outputs){
     t1=proc.time()
     cl=parallel::makeCluster(boot_cores)
     doParallel::registerDoParallel(cl)
-    OutList=foreach::foreach(i=1:boot_num,.packages = c("CapacityLogReg","mvtnorm","FNN","TDA","DEoptimR")) %do% {
+    OutList=foreach::foreach(i=1:boot_num,.packages = c("SLEMI","mvtnorm","FNN","TDA","DEoptimR")) %do% {
       
       tempdata = data.frame(signal = c(t(replicate(i_n,LETTERS[1:classes_num]))) ,
                             rbind(
@@ -365,7 +370,7 @@ for (i_output in i_outputs) {
     t1=proc.time()
     cl=parallel::makeCluster(boot_cores)
     doParallel::registerDoParallel(cl)
-    OutList=foreach::foreach(i=1:boot_num,.packages = c("CapacityLogReg","mvtnorm",
+    OutList=foreach::foreach(i=1:boot_num,.packages = c("SLEMI","mvtnorm",
                                                         "FNN","TDA","DEoptimR")) %do% {
       
       tempdata = data.frame(signal = c(t(replicate(i_n,LETTERS[1:classes_num]))) ,
@@ -398,7 +403,7 @@ for (i_output in i_outputs) {
       t1=proc.time()
       cl=parallel::makeCluster(boot_cores)
       doParallel::registerDoParallel(cl)
-      OutList=foreach::foreach(i=1:boot_num,.packages = c("CapacityLogReg","mvtnorm",
+      OutList=foreach::foreach(i=1:boot_num,.packages = c("SLEMI","mvtnorm",
                                                           "FNN","TDA","DEoptimR")) %do% {
         
         tempdata = data.frame(signal = c(t(replicate(i_n,LETTERS[1:classes_num]))) ,
@@ -537,7 +542,7 @@ for (i_var in sds){
     
     cl=parallel::makeCluster(boot_cores)
     doParallel::registerDoParallel(cl)
-    OutList=foreach::foreach(i=1:boot_num,.packages = c("CapacityLogReg")) %dopar% {
+    OutList=foreach::foreach(i=1:boot_num,.packages = c("SLEMI")) %dopar% {
       tempdata = data.frame(signal = c(t(replicate(i_n,LETTERS[1:classes_num]))) ,
                             output = c(matrix(rexp(classes_num*i_n,rate=1/example_means),ncol=classes_num,byrow=TRUE) ))
       path_output_single_boot=paste(path_output_single,i,"/",sep="")
@@ -592,7 +597,7 @@ for (i_var in sds){
     
     cl=parallel::makeCluster(boot_cores)
     doParallel::registerDoParallel(cl)
-    OutList=foreach::foreach(i=1:boot_num,.packages = c("CapacityLogReg"),.export=c("x_log_y")) %dopar% {
+    OutList=foreach::foreach(i=1:boot_num,.packages = c("SLEMI"),.export=c("x_log_y")) %dopar% {
       tempdata = data.frame(signal = c(t(replicate(i_n,LETTERS[1:classes_num]))) ,
                             output = c(matrix(rgamma(classes_num*i_n,shape=example_shape,scale=example_scale),ncol=classes_num,byrow=TRUE) ))
       path_output_single_boot=paste(path_output_single,i,"/",sep="")
@@ -647,7 +652,7 @@ for (i_var in sds){
     
     cl=parallel::makeCluster(boot_cores)
     doParallel::registerDoParallel(cl)
-    OutList=foreach::foreach(i=1:boot_num,.packages = c("CapacityLogReg"),.export=c("x_log_y")) %dopar% {
+    OutList=foreach::foreach(i=1:boot_num,.packages = c("SLEMI"),.export=c("x_log_y")) %dopar% {
       tempdata = data.frame(signal = c(t(replicate(i_n,LETTERS[1:classes_num]))) ,
                             output = c(matrix(rlnorm(classes_num*i_n,meanlog =example_logmeans ,sdlog = example_logsds),ncol=classes_num,byrow=TRUE) ))
       path_output_single_boot=paste(path_output_single,i,"/",sep="")
@@ -699,7 +704,7 @@ for (i_var in sds){
     
     cl=parallel::makeCluster(boot_cores)
     doParallel::registerDoParallel(cl)
-    OutList=foreach::foreach(i=1:boot_num,.packages = c("CapacityLogReg"),.export=c("x_log_y")) %dopar% {
+    OutList=foreach::foreach(i=1:boot_num,.packages = c("SLEMI"),.export=c("x_log_y")) %dopar% {
       tempdata = data.frame(signal = c(t(replicate(i_n,LETTERS[1:classes_num]))) ,
                             output = c(matrix(rnorm(classes_num*i_n,mean=example_means,sd=example_sds),ncol=classes_num,byrow=TRUE) ))
       path_output_single_boot=paste(path_output_single,i,"/",sep="")

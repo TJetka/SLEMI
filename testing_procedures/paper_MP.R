@@ -1,10 +1,15 @@
 ### ### ### ### ### ### ### ### ### ### ### ### 
 ###                                         ###
 ### title: Script for testing procedures    ###
-###         of CapacityLogReg package       ###
-### author: Tomasz Jetka                    ###
-### date: 15.06.2018                        ###
-### XXXX submission                         ###
+###         of SLEMI R package              ###
+### author: T. Jetka, K. Nienaltowski,      ###
+###         T. Winarski, M. Komorowski      ###
+### date: 22.07.2018                        ###
+### Submission of manuscript:               ###
+###                                         ###
+### Information-theoretic analysis of       ###
+### multivariate signaling responses        ###
+### using SLEMI                             ###
 ###                                         ###
 ### ### ### ### ### ### ### ### ### ### ### ### 
 
@@ -16,13 +21,13 @@
 ### 2) Capacity - replicates Fig.1 A-B
 ### 3) Probabilities of discrimination - replicates Fig.1 C-D
 ### 
-### Output will be saved in 'plotsMP/' under working directory (to be set in line)
+### Output will be saved in 'plotsMP/' under working directory (to be set in line 63)
 ##
 ## In default mode (5 repetition of bootstrap), running Capacity section takes approx. 2 hours with a single core.
-## Set number of cores for parallel processing in line 77.
+## Set number of cores for parallel processing in line 83.
 ## Running Probability of discrimination section takes about 3 minutes.
 ##
-## For a graphs like in MP (full diagnostic tests) set variable 'analysis_type' in line 78 to value 'full'
+## For a graphs like in MP (full diagnostic tests) set variable 'analysis_type' in line 84 to value 'full'
 ###
 ### Lines, where the activity of the user is needed, are emphasised with "FOR USER:"
 ### 
@@ -40,16 +45,17 @@
 #           remember to load installed package
 require("devtools")  # install.packages("devtools")
 require("e1071")     # install.packages("e1071")
+require("Hmisc")     # install.packages("Hmisc")
 require("mvtnorm")   # install.packages("mvtnorm")
 require("ggplot2")   # install.packages("ggplot2")
 require("gridExtra") # install.packages("gridExtra")
 require("corrplot") # install.packages("corrplot")
 
 
-## 0. Install CapacityLogReg package by: (if not installed already)
+## 0. Install SLEMI package by: (if not installed already)
 # install.packages("devtools") # if not installed
 # library(devtools)
-# install_github("TJetka/LogRegCapacity")
+# install_github("TJetka/SLEMI")
 
 #### Preliminaries ####
 #1 Setting up working directory 
@@ -58,7 +64,7 @@ setwd("D:/IPPT/Testing/Test1/")
 
 #2. Loading neccessary libraries
 source("aux_functions.R")
-library(CapacityLogReg)
+library(SLEMI)
 aux_loadPackages(c("reshape2","ggplot2","stringr","doParallel","corrplot"))
 
 #3 Inspect data saved in object data_nfkb, which stores our experimental measurements of NfkB signaling pathway
@@ -289,3 +295,12 @@ dev.off()
 pdf(paste0("plotsMP/plot_1D.pdf"),height=10,width=10)
 corrplot(ProbTS,type = "upper", method = "pie",cl.lim = c(0.5, 1),col=col2(40))
 dev.off()
+
+#15 It can be also achieved without calculating capacities, by running function prob_discr_pairwise()
+data_type="Nfkb_5min_probs_discrimination_2"
+full_path_out = paste('plotsMP/',data_type,'/',sep="")
+
+output_temp=prob_discr_pairwise(dataRaw=data_nfkb,signal="signal", response="response_21",output_path=paste0(full_path_out,"/time21/"))
+output_temp=prob_discr_pairwise(dataRaw=data_nfkb,signal="signal", response=paste("response",seq(from=0,to=120,by=3),sep="_"),
+                                output_path=paste0(full_path_out,"/time_TS/"))
+

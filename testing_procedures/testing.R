@@ -1,16 +1,21 @@
 ### ### ### ### ### ### ### ### ### ### ### ### 
 ###                                         ###
 ### title: Script for testing procedures    ###
-###         of CapacityLogReg package       ###
-### author: Tomasz Jetka                    ###
-### date: 15.06.2018                        ###
-### XXXX submission                         ###
+###         of SLEMI R package              ###
+### author: T. Jetka, K. Nienaltowski,      ###
+###         T. Winarski, M. Komorowski      ###
+### date: 22.07.2018                        ###
+### Submission of manuscript:               ###
+###                                         ###
+### Information-theoretic analysis of       ###
+### multivariate signaling responses        ###
+### using SLEMI                             ###
 ###                                         ###
 ### ### ### ### ### ### ### ### ### ### ### ### 
 
 #### Descritption ####
 ### ### ###
-### Script, that demonstrates how to use and test CapacityLogReg package 
+### Script, that demonstrates how to use and test SLEMI package 
 ### to calculate channel capacity from experimental data. 
 ### A full analysis starting from 
 ### - preparation of data 
@@ -40,9 +45,9 @@ require("mvtnorm")   # install.packages("mvtnorm")
 require("ggplot2")   # install.packages("ggplot2")
 require("gridExtra") # install.packages("gridExtra")
 
-# FOR USER: install tested package LogRegCapacity
-install_github("TJetka/LogRegCapacity")
-#install_github("TJetka/CapacityLogReg",auth="e58b0b5e5c8dc6a997f5ec039fc6644f984ebc9c")
+# FOR USER: install tested package SLEMI
+#install_github("TJetka/SLEMI")
+install_github("TJetka/SLEMI",auth="e58b0b5e5c8dc6a997f5ec039fc6644f984ebc9c")
 
 
 #### Script configuration ####
@@ -53,8 +58,8 @@ dir.create(path_wd,recursive = TRUE)
 setwd(path_wd)
 
 ### 2. 
-# Load CapacityLogReg package 
-library(CapacityLogReg)
+# Load SLEMI package 
+library(SLEMI)
 
 ### 3. 
 # Set a seed of a random number generator for reproducability 

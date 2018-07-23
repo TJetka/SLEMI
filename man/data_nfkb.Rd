@@ -4,12 +4,11 @@
 \name{data_nfkb}
 \alias{data_nfkb}
 \title{Data from experiment with NFkB pathway}
-\format{A data frame with 1500 rows and 3 variables:
+\format{A data frame with 15632 rows and 42 variables:
 \describe{
-\item{signal}{Label of input}
-\item{response}{The value of output}
-\item{sideVar}{Label of the type of given observation}
-}}
+\item{signal}{Level of TNFa stimulation}
+\item{response_T}{The concentration of normalised NfkB transcription factor, measured at time T}
+#' }}
 \source{
 in-house experimental data
 }
@@ -17,9 +16,15 @@ in-house experimental data
 data_nfkb
 }
 \description{
-A dataset describing simple one dimensional intput - one dimensional output channel 
-with 500 observations per input. Each observation can be in addition of 3 types
-that occurs with propensities (0.6,0.3,0.1), resepctively. 
-Conditional output distributions are Gaussian.
+In the paper describing methodological aspects of our algorithm we present the analysis of information transmission 
+in NfkB pathway upn the stimulation of TNF-$\alpha$. Experimental data from this experiment in the form of single-cell 
+time series are attached to the package as a data.frame object and can be accessed using `data_nfkb` variable.
+Each row of `data_nfkb` represents a single observation of a cell. Column 'signal' indicates the level of TNF-$\alpha$ 
+stimulation for a given cell, while columns 'response_T', gives the normalised ratio of nuclear and cytoplasmic transcription 
+factor as described in Supplementary Methods of the corresponding publication.
+}
+\details{
+For each concentration, there are at least 1000 single-cell observation (with the exception of 0.5ng stimulation, 
+where the number of identified cells is almost 900)
 }
 \keyword{datasets}

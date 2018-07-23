@@ -1,6 +1,6 @@
 #' Numerical intergration by trapezoidal rule
 #' 
-#' This function calculate the integral of function described by points (x,y).
+#' This function calculate the integral of function described by set of points (x,y) using trapezoidal rule.
 #' @param x is a numeric vector
 #' @param y is a numeric vector of the same length as x
 #' @return A numeric value of integral approximated by trapezoids
