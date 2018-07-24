@@ -63,7 +63,7 @@ Please see [Instruction](https://github.com/rocker-org/rocker/wiki/Using-the-RSt
 
 ## Basic usage
 
-The package is based on a main wrapper function - `capacity_logreg_main()`, which calls specific methods implemented within this package.
+The package is based on a main wrapper function - `capacity_logreg_main()` for calculation of channel capacity, which calls specific methods implemented within this package. Similarly, functions `mi_logreg_main()` can be used to estimate mutual information, while `prob_discr_pairwise()` to compute probabilities of discrimination between two different input states.
 
 ### Preaparing data
 
@@ -134,7 +134,7 @@ In order to use those procedures, user must provide additional arguments to func
 
 ## Support
 
-Please mail t.jetka at gmail.com in case of any bugs, problems and questions regarding package or inquiries regarding information theory.
+Please mail t.jetka at sysbiosig.org in case of any bugs, problems and questions regarding package or inquiries regarding information theory.
 
 ## Reference
 

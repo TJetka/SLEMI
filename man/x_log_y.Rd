@@ -12,8 +12,8 @@ x_log_y(x, y)
 \item{y}{is a numeric vector (the same length of x)}
 }
 \value{
-Function calculates the value of expression \eqn{x\cdot \log y} element-wise. 
-The result is a numeric vector of the same length as x
+Function calculates the value of expression \eqn{x\cdot \log y} element-wise in a numerically stable way. 
+The result is a numeric vector of the same length as x. It is assumed that \eqn{0\cdot \log 0 = 0}.
 }
 \description{
 Calculation of expression \eqn{x\cdot \log y}

@@ -8,7 +8,7 @@
 \alias{capacity_output_graph_boxplotsSideVar}
 \alias{capacity_output_graph_capacity}
 \alias{capacity_output_graph_densities}
-\title{Plotting output of capacity estimation}
+\title{Plotting output of capacity estimation. Auxillary functions.}
 \usage{
 capacity_output_graph_io(data, signal, response, path, height, width)
 

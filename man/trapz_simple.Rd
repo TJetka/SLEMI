@@ -15,7 +15,7 @@ trapz_simple(x, y)
 A numeric value of integral approximated by trapezoids
 }
 \description{
-This function calculate the integral of function described by points (x,y).
+This function calculate the integral of function described by set of points (x,y) using trapezoidal rule.
 }
 \examples{
 trapz_simple(x=1:10,y=exp(1:10))

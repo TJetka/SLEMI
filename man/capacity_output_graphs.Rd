@@ -2,7 +2,7 @@
 % Please edit documentation in R/output_graphs.R
 \name{capacity_output_graphs}
 \alias{capacity_output_graphs}
-\title{Plotting output of capacity estimation}
+\title{Plotting output of capacity estimation and additional exploratory graphs.}
 \usage{
 capacity_output_graphs(data, signal, response, side_variables, cc_output,
   output_path, height = 4, width = 6)
@@ -16,13 +16,26 @@ capacity_output_graphs(data, signal, response, side_variables, cc_output,
 
 \item{side_variables}{is a character vector that indicates side variables' columns of data}
 
-\item{cc_output}{a list that is the output of capacity_logreg_algorithm function}
+\item{cc_output}{a list that is a standard output of capacity_logreg_algorithm function}
 
 \item{height}{integer indicating the height of a single plot}
 
 \item{width}{integer indicating the width of a single plot}
 
 \item{path}{character giving the directory, where graphs should be saved}
+}
+\value{
+A list with ggplot or gtable object. Each plot is also saved in `output_path` directory in separate pdfs files which include:
+\itemize{
+\item MainPlot.pdf - a simple summary plot with basic distribution visualization and capacity estimate
+\item MainPlot_full.pdf - a comprehensive summary plot with distribution visualization and capacity estimate
+\item capacity.pdf - a diagram presenting the capacity estimates
+\item io_relation.pdf - a graph with input-output relation
+\item kdensities.pdf - kernel density estimator of data distribution
+\item histograms.pdf - histograms of data
+\item boxplots.pdf - boxplots of data
+\item violin.pdf - violin plots of data
+}
 }
 \description{
 INPUT:

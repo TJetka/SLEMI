@@ -171,7 +171,10 @@ prob_discr_pairwise<-function(dataRaw,
   output=list()
   
   output$prob_matr=prob_matrix
+  
+  if (model_out){
   output$model=model_output
+  }
   
   output
 }

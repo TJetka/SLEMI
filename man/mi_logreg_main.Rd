@@ -87,24 +87,14 @@ The main wrapping function for basic usage of SLEMI package for estimation of mu
 tempdata=data_example1
 dir.create("example1/",recursive=TRUE)
 outputCLR1=mi_logreg_main(dataRaw=tempdata,
-signal="signal", response="output", side_variables = NULL ,
-formula_string = "signal~output",
+signal="signal", response="output",
 lr_maxit=1500, output_path="example1/",plot_height=8,plot_width=12)
-
-
-tempdata=data_example1
-dir.create("example1_sv/",recursive=TRUE)
-outputCLR1_sv=mi_logreg_main(dataRaw=tempdata,
-signal="signal", response="output", side_variables = "sideVar" ,
-formula_string = "signal~output*sideVar",
-lr_maxit=1500, output_path="example1_sv/",plot_height=8,plot_width=12)
 
 
 tempdata=data_example1
 dir.create("example1_testing/",recursive=TRUE)
 outputCLR1_testing=mi_logreg_main(dataRaw=tempdata,
-signal="signal", response="output", side_variables = NULL ,
-formula_string = "signal~output",
+signal="signal", response="output",
 lr_maxit=1500, output_path="example1_testing/",plot_height=8,plot_width=12,
 testing=TRUE,graphs=TRUE,TestingSeed=11111, boot_num=50,boot_prob=0.8,testing_cores=2,
 sidevar_num=2,traintest_num=50,partition_trainfrac=0.6)
@@ -113,8 +103,7 @@ sidevar_num=2,traintest_num=50,partition_trainfrac=0.6)
 tempdata=data_example2
 dir.create("example2/",recursive=TRUE)
 outputCLR2=mi_logreg_main(dataRaw=tempdata,
-signal="signal", response=c("X1","X2","X3"), side_variables = NULL ,
-formula_string = "signal~X1+X2+X3",
+signal="signal", response=c("X1","X2","X3"),
 lr_maxit=1500, output_path="example2/",plot_height=8,plot_width=12) 
 
 For further details see vignette
