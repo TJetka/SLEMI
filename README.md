@@ -1,6 +1,6 @@
 # Statistical Learning based Estimation of Mutual Information (SLEMI)
 
-The R package SLEMI is designed to estimate channel capacity between finite state input and multidimensional output from experimental data. For efficient computations, it uses iterative algorithm based on logistic regression.  The core function `capacity_logreg_main()` is the basic interface to all functionalities provided in the package. A comprehensive documentation is available on [github.io](https://github.io/) and in directory [`docs/SLEMI_documentation.pdf`](https://github.com/TJetka/LogRegCapacity/blob/master/docs/SLEMI_documentation.pdf).
+The R package SLEMI is designed to estimate channel capacity between finite state input and multidimensional output from experimental data. For efficient computations, it uses iterative algorithm based on logistic regression.  The core function `capacity_logreg_main()` is the basic interface to all functionalities provided in the package. A comprehensive documentation is available on [github.io](https://github.io/) and in directory [`docs/SLEMI_documentation.pdf`](https://github.com/TJetka/SLEMI/blob/master/docs/SLEMI_documentation.pdf).
 
 ## Setup
 
@@ -14,7 +14,7 @@ The main software requirement is the installation of the R environment (version:
 
 Apart from base installation of R, SLEMI requires following packages:
 
-1. for instalation 
+1. for installation 
 
   + devtools
   
@@ -91,7 +91,7 @@ For convenience of further analysis, this list is saved in `output_path` directo
 
 ## Examples
 
-Additional examples of using package with some background on information theory is given in [`testing_procedures/SLEMI_testing.pdf`](https://github.com/TJetka/LogRegCapacity/blob/master/testing_procedures/SLEMI_testing.pdf) and implemented in script [`testing_procedures/testing.R`](https://github.com/TJetka/LogRegCapacity/blob/master/testing_procedures/testing.R). Codes used in publication are accessible from [`testing_procedures/paper_MP.R`](https://github.com/TJetka/LogRegCapacity/blob/master/testing_procedures/paper_MP.R) and [`testing_procedures/paper_SI.R`](https://github.com/TJetka/LogRegCapacity/blob/master/testing_procedures/paper_SI.R) respectively.
+Additional examples of using package with some background on information theory is given in [`testing_procedures/SLEMI_testing.pdf`](https://github.com/TJetka/SLEMI/blob/master/testing_procedures/SLEMI_testing.pdf) and implemented in script [`testing_procedures/testing.R`](https://github.com/TJetka/SLEMI/blob/master/testing_procedures/testing.R). Codes used in publication are accessible from [`testing_procedures/paper_MP.R`](https://github.com/TJetka/SLEMI/blob/master/testing_procedures/paper_MP.R) and [`testing_procedures/paper_SI.R`](https://github.com/TJetka/SLEMI/blob/master/testing_procedures/paper_SI.R) respectively.
 
 ### Datasets
 
@@ -143,4 +143,4 @@ Please cite
 
 ## Licence
 
-SLEMI is released under the GNU licence and is freely available. A comprehensive documentation is available on [github.io](https://github.io/) and in directory [`docs/SLEMI_documentation.pdf`](https://github.com/TJetka/LogRegCapacity/blob/master/docs/SLEMI_documentation.pdf).
+SLEMI is released under the GNU licence and is freely available. A comprehensive documentation is available on [github.io](https://github.io/) and in directory [`docs/SLEMI_documentation.pdf`](https://github.com/TJetka/SLEMI/blob/master/docs/SLEMI_documentation.pdf).
