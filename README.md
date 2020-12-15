@@ -34,11 +34,12 @@ The main software requirement is the installation of the R environment (version:
 > `install.packages("name_of_a_package")`
  in the R console.
  ### Installation
+SLEMI is not on R CRAN. Please install using
+>`install.packages("SLEMI")`
+
  In order to install the package use following commands in R's console
  > `# install.packages("devtools") # run if not installed`
- 
  > `library(devtools)`
- 
  > `install_github("TJetka/SLEMI")`
  
  ## Basic usage
