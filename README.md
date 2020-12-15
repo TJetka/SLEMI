@@ -1,5 +1,5 @@
 # Statistical Learning based Estimation of Mutual Information (SLEMI)
- The R package SLEMI is designed to estimate channel capacity between finite state input and multidimensional output from experimental data. For efficient computations, it uses iterative algorithm based on logistic regression.  The core function `capacity_logreg_main()` is the basic interface to all functionalities provided in the package. A comprehensive documentation is available in directory [`vignette/SLEMI_vignette.pdf`](https://github.com/sysbiosig/SLEMI/blob/master/vignette/SLEMI_vignette.pdf).
+ The R package SLEMI is designed to estimate channel capacity between finite state input and multidimensional output from experimental data. For efficient computations, it uses iterative algorithm based on logistic regression.  The core function `capacity_logreg_main()` is the basic interface to all functionalities provided in the package. A comprehensive documentation is available in directory [`vignette/SLEMI_vignette.pdf`](https://github.com/TJetka/SLEMI/blob/master/vignette/SLEMI_vignette.pdf).
  ## Setup
  ### Requirements - Hardware
   + A 32 or 64 bit processor (recommended: 64bit)
@@ -39,7 +39,7 @@ The main software requirement is the installation of the R environment (version:
  
  > `library(devtools)`
  
- > `install_github("sysbiosig/SLEMI")`
+ > `install_github("TJetka/SLEMI")`
  
  ## Basic usage
  The package is based on a main wrapper function - `capacity_logreg_main()` for calculation of channel capacity, which calls specific methods implemented within this package. Similarly, functions `mi_logreg_main()` can be used to estimate mutual information, while `prob_discr_pairwise()` to compute probabilities of discrimination between two different input states.
@@ -60,7 +60,7 @@ where:
 * model - `nnet` object describing fitted logistic regression model
  For convenience of further analysis, this list is saved in `output_path` directory in a file `output.rds`. In addition to that, a set of exploratory graphs are created to visualise obtained estimates.
  ## Examples
- Additional examples of using package with some background on information theory is given in [`paper/TestingProcedures.pdf`](https://github.com/sysbiosig/SLEMI/blob/master/paper/TestingProcedures.pdf) and implemented in script [`paper/testing_procedures.R`](https://github.com/sysbiosig/SLEMI/blob/master/paper/testing_procedures.R). Codes used in publication are accessible from [`paper/paper_MP.R`](https://github.com/sysbiosig/SLEMI/blob/master/paper/paper_MP.R) and [`paper/paper_SI.R`](https://github.com/sysbiosig/SLEMI/blob/master/paper/paper_SI.R) respectively.
+ Additional examples of using package with some background on information theory is given in [`paper/TestingProcedures.pdf`](https://github.com/TJetka/SLEMI/blob/master/paper/TestingProcedures.pdf) and implemented in script [`paper/testing_procedures.R`](https://github.com/TJetka/SLEMI/blob/master/paper/testing_procedures.R). Codes used in publication are accessible from [`paper/paper_MP.R`](https://github.com/TJetka/SLEMI/blob/master/paper/paper_MP.R) and [`paper/paper_SI.R`](https://github.com/TJetka/SLEMI/blob/master/paper/paper_SI.R) respectively.
  ### Datasets
  In the manuscript describing methodological aspects of our algorithm we present the analysis of information transmission in NfkB pathway upn the stimulation of TNF-$\alpha$. Experimental data from this experiment in the form of single-cell time series are attached to the package as a data.frame object and can be accessed using `data_nfkb` variable.
  Each row of `data_nfkb` represents a single observation of a cell. Column 'signal' indicates the level of TNF-$\alpha$ stimulation for a given cell, while columns 'response_T', gives the normalised ratio of nuclear and cytoplasmic transcription factor as described in Supplementary Methods of the corresponding publication. 
@@ -92,4 +92,4 @@ where:
  Please cite
 > Jetka T, Nienałtowski K, Winarski T, Błoński S, Komorowski M (2019) Information-theoretic analysis of multivariate single-cell signaling responses. PLOS Computational Biology 15(7): e1007132. https://doi.org/10.1371/journal.pcbi.1007132
  ## Licence
- SLEMI is released under the GNU licence and is freely available. A comprehensive documentation is available in directory [`vignette/SLEMI_vignette.pdf`](https://github.com/sysbiosig/SLEMI/blob/master/vignette/SLEMI_vignette.pdf).
+ SLEMI is released under the GNU licence and is freely available. A comprehensive documentation is available in directory [`vignette/SLEMI_vignette.pdf`](https://github.com/TJetka/SLEMI/blob/master/vignette/SLEMI_vignette.pdf).
