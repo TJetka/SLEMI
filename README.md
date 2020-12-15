@@ -1,6 +1,6 @@
 # Statistical Learning based Estimation of Mutual Information (SLEMI)
 
-The original version of the package, as shown in the corresponding manuscript. For the maintained and updated version or assistance, please see [GitHub of sysbiosig group](https://github.com/sysbiosig/SLEMI/).
+The   original version of the package, as shown in the corresponding manuscript. For the maintained and updated version or assistance, please see [GitHub of sysbiosig group](https://github.com/sysbiosig/SLEMI/).
 
 The R package SLEMI is designed to estimate channel capacity between finite state input and multidimensional output from experimental data. For efficient computations, it uses iterative algorithm based on logistic regression.  The core function `capacity_logreg_main()` is the basic interface to all functionalities provided in the package. A comprehensive documentation is available on [github.io](https://github.io/) and in directory [`docs/SLEMI_documentation.pdf`](https://github.com/TJetka/SLEMI/blob/master/docs/SLEMI_documentation.pdf).
 
