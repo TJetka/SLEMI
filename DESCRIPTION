@@ -1,6 +1,6 @@
 Package: SLEMI
 Title: Statistical Learning Based Estimation of Mutual Information
-Version: 1.1
+Version: 1.2
 Date: 2020-12-15
 Authors@R: c(person("Tomasz", "Jetka", email = "t.jetka@gmail.com", role = c("aut", "cre")),
 			 person("Karol", "Nienaltowski",role="ctb"),person("Michal", "Komorowski",role="ctb"))
@@ -12,6 +12,10 @@ BugReports: https://github.com/TJetka/SLEMI/issues
 Encoding: UTF-8
 LazyData: true
 Imports: e1071, ggplot2, ggthemes, gridExtra, nnet, Hmisc, reshape2, stringr, doParallel, caret, corrplot, foreach
-Suggests: knitr, rmarkdown
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
 VignetteBuilder: knitr
 RoxygenNote: 6.1.1
+Config/testthat/edition: 3

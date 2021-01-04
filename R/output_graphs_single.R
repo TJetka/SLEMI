@@ -62,7 +62,7 @@ capacity_output_graph_violinMean<-function(data,signal,response,path,height=4,wi
 
     dataPlot=reshape2::melt(data[,c(signalNUM,response)],id.vars=c(signalNUM))
     plot<-ggplot2::ggplot(data=dataPlot,ggplot2::aes_string(x=signalNUM,y="value"))+ggplot2::geom_violin(ggplot2::aes_string(group=signalNUM),scale="width")+
-      ggplot2::stat_summary(fun.y=mean,geom="line",size=1.15)+ggplot2::stat_summary(fun.y=mean,geom="point",size=1.5)+
+      ggplot2::stat_summary(fun=mean,geom="line",size=1.15)+ggplot2::stat_summary(fun=mean,geom="point",size=1.5)+
       ggplot2::facet_grid(variable~.)+
       ggplot2::scale_y_continuous(paste("Output",sep="") )+
       ggplot2::scale_x_continuous(paste("Input",sep=""),limits=c(minSignal*0.9-1.5,maxSignal*1.1+1.5) )+
@@ -71,7 +71,7 @@ capacity_output_graph_violinMean<-function(data,signal,response,path,height=4,wi
   } else {
     dataPlot=reshape2::melt(data[,c(signal,response)],id.vars=c(signal))
     plot<-ggplot2::ggplot(data=dataPlot,ggplot2::aes_string(x=signal,y="value"))+ggplot2::geom_violin(ggplot2::aes_string(group=signal),scale="width")+
-      ggplot2::stat_summary(fun.y=mean,geom="point",size=1.5)+
+      ggplot2::stat_summary(fun=mean,geom="point",size=1.5)+
       ggplot2::facet_grid(variable~.)+
       ggplot2::scale_y_continuous(paste("Output",sep="") )+
       ggplot2::scale_x_discrete(paste("Input",sep="") )+
