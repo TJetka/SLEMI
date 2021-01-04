@@ -1,5 +1,5 @@
 # Statistical Learning based Estimation of Mutual Information (SLEMI)
- The R package SLEMI is designed to estimate channel capacity between finite state input and multidimensional output from experimental data. For efficient computations, it uses iterative algorithm based on logistic regression.  The core function `capacity_logreg_main()` is the basic interface to all functionalities provided in the package. A comprehensive documentation is available in directory [`vignette/SLEMI_vignette.pdf`](https://github.com/TJetka/SLEMI/blob/master/vignette/SLEMI_vignette.pdf).
+ The R package SLEMI is designed to estimate channel capacity between finite state input and multidimensional output from experimental data. For efficient computations, it uses iterative algorithm based on logistic regression.  The core function `capacity_logreg_main()` is the basic interface to all functionalities provided in the package. A comprehensive documentation is available in directory [`old_vignettes/SLEMI_vignette.pdf`](https://github.com/TJetka/SLEMI/blob/master/old_vignettes/SLEMI_vignette.pdf).
  ## Setup
  ### Requirements - Hardware
   + A 32 or 64 bit processor (recommended: 64bit)
@@ -94,4 +94,4 @@ where:
  Please cite
 > Jetka T, Nienałtowski K, Winarski T, Błoński S, Komorowski M (2019) Information-theoretic analysis of multivariate single-cell signaling responses. PLOS Computational Biology 15(7): e1007132. https://doi.org/10.1371/journal.pcbi.1007132
  ## Licence
- SLEMI is released under the GNU licence and is freely available. A comprehensive documentation is available in directory [`vignette/SLEMI_vignette.pdf`](https://github.com/TJetka/SLEMI/blob/master/vignette/SLEMI_vignette.pdf).
+ SLEMI is released under the GNU licence and is freely available. A comprehensive documentation is available in directory [`old_vignettes/SLEMI_vignette.pdf`](https://github.com/TJetka/SLEMI/blob/master/old_vignettes/SLEMI_vignette.pdf).
