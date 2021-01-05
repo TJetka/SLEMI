@@ -4,12 +4,14 @@
 \name{data_example1}
 \alias{data_example1}
 \title{Examplary data set I}
-\format{A data frame with 1500 rows and 3 variables:
+\format{
+A data frame with 1500 rows and 3 variables:
 \describe{
 \item{signal}{Label of input}
 \item{response}{The value of output}
 \item{sideVar}{Label of the type of given observation}
-}}
+}
+}
 \source{
 synthetic
 }

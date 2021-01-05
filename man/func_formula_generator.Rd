@@ -4,8 +4,11 @@
 \alias{func_formula_generator}
 \title{Formula generator for logistic regression algorithm}
 \usage{
-func_formula_generator(signal = "signal", response = "response",
-  side_variables = NULL)
+func_formula_generator(
+  signal = "signal",
+  response = "response",
+  side_variables = NULL
+)
 }
 \arguments{
 \item{signal}{is a character object that indicates columns of data to be treated as channel's input}

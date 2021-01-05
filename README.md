@@ -1,3 +1,7 @@
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/TJetka/SLEMI/workflows/R-CMD-check/badge.svg)](https://github.com/TJetka/SLEMI/actions)
+<!-- badges: end -->
+
 # Statistical Learning based Estimation of Mutual Information (SLEMI)
  The R package SLEMI is designed to estimate channel capacity between finite state input and multidimensional output from experimental data. For efficient computations, it uses iterative algorithm based on logistic regression.  The core function `capacity_logreg_main()` is the basic interface to all functionalities provided in the package. A comprehensive documentation is available in directory [`old_vignettes/SLEMI_vignette.pdf`](https://github.com/TJetka/SLEMI/blob/master/old_vignettes/SLEMI_vignette.pdf).
  ## Setup

@@ -27,6 +27,18 @@ sampling_bootstrap<-function(data,prob=1,dataDiv){
   #   signal="signal"
   #   colnames(data)[colnames(data)==var]="signal"
   
+  if (prob>1|prob<=0){
+    stop("wrong probability for bootstrap")
+  }
+
+  if (!nrow(data)==length(dataDiv)){
+    stop("incorrect dataDiv length")
+  }
+
+  if (floor(prob*nrow(data))<2){
+    stop("number of re-sampled samples are too low. Increase prob parameter.")
+  }
+
   dataBoot=do.call(rbind,by(data,list(dataDiv),function(x){ 
     sample_num=nrow(x)
     sample_out=sample(1:sample_num,floor(prob*sample_num),replace=FALSE)

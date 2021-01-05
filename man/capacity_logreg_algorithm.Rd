@@ -4,10 +4,17 @@
 \alias{capacity_logreg_algorithm}
 \title{Main algorithm to calculate channel capacity by SLEMI approach}
 \usage{
-capacity_logreg_algorithm(data, signal = "signal",
-  response = "response", side_variables = NULL,
-  formula_string = NULL, model_out = TRUE, cc_maxit = 100,
-  lr_maxit = 1000, MaxNWts = 5000)
+capacity_logreg_algorithm(
+  data,
+  signal = "signal",
+  response = "response",
+  side_variables = NULL,
+  formula_string = NULL,
+  model_out = TRUE,
+  cc_maxit = 100,
+  lr_maxit = 1000,
+  MaxNWts = 5000
+)
 }
 \arguments{
 \item{data}{must be a data.frame object. Cannot contain NA values.}
@@ -52,9 +59,7 @@ Information-theoretic analysis of multivariate single-cell signaling responses u
 
 \examples{
 tempdata=data_example1
-outputCLR1=capacity_logreg_main(dataRaw=tempdata,
-signal="signal", response="response",
-formula_string = "signal~response",
-cc_maxit=75,lr_maxit=1500, plot_height=8,plot_width=12)
+outputCLR1=capacity_logreg_algorithm(data=tempdata, signal="signal", response="response",
+formula_string = "signal~response")
 
 }

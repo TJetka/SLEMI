@@ -4,11 +4,23 @@
 \alias{mi_logreg_testing}
 \title{Testing procedures for estimation of mutual information}
 \usage{
-mi_logreg_testing(data, signal = "signal", response = "response",
-  side_variables = NULL, pinput = NULL, lr_maxit = 1000,
-  MaxNWts = 5000, formula_string = NULL, TestingSeed = 1234,
-  testing_cores = 4, boot_num = 10, boot_prob = 0.8,
-  sidevar_num = 10, traintest_num = 10, partition_trainfrac = 0.6)
+mi_logreg_testing(
+  data,
+  signal = "signal",
+  response = "response",
+  side_variables = NULL,
+  pinput = NULL,
+  lr_maxit = 1000,
+  MaxNWts = 5000,
+  formula_string = NULL,
+  TestingSeed = 1234,
+  testing_cores = 1,
+  boot_num = 10,
+  boot_prob = 0.8,
+  sidevar_num = 10,
+  traintest_num = 10,
+  partition_trainfrac = 0.6
+)
 }
 \arguments{
 \item{data}{must be a data.frame object. Cannot contain NA values.}
@@ -72,13 +84,12 @@ Information-theoretic analysis of multivariate single-cell signaling responses u
 }
 
 \examples{
-## Compute uncertainity of mutual information estimator using 4 cores
-\dontrun{
-temp_data=data_example1
-output=mi_logreg_testing(data=data_example1,
+## Compute uncertainity of mutual information estimator using 1 core
+## Set boot_num and traintest_num with larger numbers for more reliable testing
+tempdata=data_example1
+output=mi_logreg_testing(data=tempdata,
                    signal = "signal",
                    response = "response",
-                   testing_cores = 4)
-}
+                   testing_cores = 1,boot_num=1,traintest_num=1)
 }
 \keyword{internal}

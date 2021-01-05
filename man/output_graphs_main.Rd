@@ -4,8 +4,16 @@
 \alias{output_graphs_main}
 \title{Plotting output of capacity estimation and additional exploratory graphs.}
 \usage{
-output_graphs_main(data, signal, response, side_variables, cc_output,
-  output_path, height = 4, width = 6)
+output_graphs_main(
+  data,
+  signal,
+  response,
+  side_variables,
+  cc_output,
+  output_path,
+  height = 4,
+  width = 6
+)
 }
 \arguments{
 \item{data}{is a data.frame object}

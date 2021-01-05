@@ -3,7 +3,6 @@
 \docType{package}
 \name{SLEMI}
 \alias{SLEMI}
-\alias{SLEMI-package}
 \title{Statistical Learning based Estimation of Mutual Information (SLEMI). A package for estimating mutual information and channel capacity from experimental data.}
 \description{
 The package SLEMI is designed to estimate channel capacity between finite 

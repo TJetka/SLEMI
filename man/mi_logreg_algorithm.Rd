@@ -4,9 +4,17 @@
 \alias{mi_logreg_algorithm}
 \title{Main algorithm to calculate mutual information by SLEMI approach}
 \usage{
-mi_logreg_algorithm(data, signal = "signal", response = "response",
-  side_variables = NULL, pinput = NULL, formula_string = NULL,
-  lr_maxit = 1000, MaxNWts = 5000, model_out = TRUE)
+mi_logreg_algorithm(
+  data,
+  signal = "signal",
+  response = "response",
+  side_variables = NULL,
+  pinput = NULL,
+  formula_string = NULL,
+  lr_maxit = 1000,
+  MaxNWts = 5000,
+  model_out = TRUE
+)
 }
 \arguments{
 \item{data}{must be a data.frame object. Cannot contain NA values.}

@@ -1,5 +1,5 @@
-library(testthat)
-library(SLEMI)
+# library(testthat)
+# library(SLEMI)
 
 
 #aux_x_log_y
