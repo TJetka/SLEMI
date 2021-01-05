@@ -40,7 +40,7 @@ mi_logreg_main(
 
 \item{side_variables}{(optional) is a character vector that indicates side variables' columns of data, if NULL no side variables are included}
 
-\item{pinput}{is a numeric vector with piror probabilities of the input values. Uniform distribution is assumed as default (pinput=NULL).}
+\item{pinput}{is a numeric vector with prior probabilities of the input values. Uniform distribution is assumed as default (pinput=NULL).}
 
 \item{formula_string}{(optional) is a character object that includes a formula syntax to use in logistic regression model. 
 If NULL, a standard additive model of response variables is assumed. Only for advanced users.}
@@ -51,7 +51,7 @@ If NULL, a standard additive model of response variables is assumed. Only for ad
 
 \item{testing}{is the logical indicating if the testing procedures should be executed}
 
-\item{model_out}{is the logical indicating if the calculated logisitc regression model should be included in output list}
+\item{model_out}{is the logical indicating if the calculated logistic regression model should be included in output list}
 
 \item{scale}{is a logical indicating if the response variables should be scaled and centered before fitting logistic regression}
 
@@ -69,9 +69,9 @@ If NULL, a standard additive model of response variables is assumed. Only for ad
 
 \item{partition_trainfrac}{is the fraction of data to be used as a training dataset}
 
-\item{plot_width}{- the basic dimnesions (width) of plots, in inches}
+\item{plot_width}{-  basic dimensions (width) of plots, in inches}
 
-\item{plot_height}{- the basic dimnesions (height) of plots, in inches}
+\item{plot_height}{-  basic dimensions (height) of plots, in inches}
 
 \item{data_out}{is the logical indicating if the data should be included in output list}
 }
@@ -96,7 +96,7 @@ are saved there, together with a compressed output object (as .rds file) with fu
 }
 \details{
 In a typical experiment aimed to quantify information flow a given signaling system, input values \eqn{x_1\leq x_2 \ldots... \leq x_m}, ranging from 0 to saturation are considered.
-Then, for each input level, \eqn{x_i}, \eqn{n_i} observations are collected, which are represetned as vectors 
+Then, for each input level, \eqn{x_i}, \eqn{n_i} observations are collected, which are represented as vectors 
 \deqn{y^i_j \sim P(Y|X = x_i)}
 Within information theory the degree of information transmission is measured as the mutual information
 \deqn{MI(X,Y) = \sum_{i=1}^{m} P(x_i)\int_{R^k} P(y|X = x_i)log_2\frac{P(y|X = x_i)}{P(y)}dy,}

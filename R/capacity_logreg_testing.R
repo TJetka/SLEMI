@@ -1,11 +1,11 @@
 #' Testing procedures for estimation of channel capacity
 #' 
-#' Diagnostic procedures that allows to compute the uncertainity of estimation of channel capacity by SLEMI approach. Two main procedures are implemented:
-#' bootstrap, which execute estimation with using a fraction of data and overfitting test, which dividies data into two parts: training and testing. Each of them
+#' Diagnostic procedures that allows to compute the  uncertainty of estimation of channel capacity by SLEMI approach. Two main procedures are implemented:
+#' bootstrap, which execute estimation with using a fraction of data and overfitting test, which divides data into two parts: training and testing. Each of them
 #' is repeated specified number of times to obtain a distribution of our estimators. It is recommended to conduct estimation by calling capacity_logreg_main.R.
 #'
 #' If side variables are added within the analysis (side_variables is not NULL), two additional procedures are carried out:
-#' reshuffling test and reshuffling with boostrap test, which are based on permutation of side variables values within the dataset.  
+#' reshuffling test and reshuffling with bootstrap test, which are based on permutation of side variables values within the dataset.  
 #' Additional parameters: lr_maxit and maxNWts are the same as in definition of multinom function from nnet package. An alternative
 #' model formula (using formula_string arguments) should be provided if  data are not suitable for description by logistic regression
 #' (recommended only for advanced users).
@@ -21,7 +21,7 @@
 #' @param side_variables (optional) is a character vector that indicates side variables' columns of data, if NULL no side variables are included
 #' @param formula_string (optional) is a character object that includes a formula syntax to use in logistic regression model. 
 #' If NULL, a standard additive model of response variables is assumed. Only for advanced users.
-#' @param cc_maxit is the number of iteration of iterative optimisation of the algorithm to esimate channel capacity. Default is 100.
+#' @param cc_maxit is the number of iteration of iterative optimisation of the algorithm to estimate channel capacity. Default is 100.
 #' @param lr_maxit is a maximum number of iteration of fitting algorithm of logistic regression. Default is 1000.
 #' @param maxNWts is a maximum acceptable number of weights in logistic regression algorithm. Default is 5000.
 #' @param TestingSeed is the seed for random number generator used in testing procedures

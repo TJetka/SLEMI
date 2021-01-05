@@ -17,10 +17,10 @@
 #' @param side_variables (optional) is a character vector that indicates side variables' columns of data, if NULL no side variables are included
 #' @param formula_string (optional) is a character object that includes a formula syntax to use in logistic regression model. 
 #' If NULL, a standard additive model of response variables is assumed. Only for advanced users.
-#' @param cc_maxit is the number of iteration of iterative optimisation of the algorithm to esimate channel capacity. Default is 100.
+#' @param cc_maxit is the number of iteration of iterative optimisation of the algorithm to estimate channel capacity. Default is 100.
 #' @param lr_maxit is a maximum number of iteration of fitting algorithm of logistic regression. Default is 1000.
 #' @param MaxNWts is a maximum acceptable number of weights in logistic regression algorithm. Default is 5000.
-#' @param model_out is the logical indicating if the calculated logisitc regression model should be included in output list
+#' @param model_out is the logical indicating if the calculated logistic regression model should be included in output list
 #' @export
 #' @return a list with three elements:
 #' \itemize{

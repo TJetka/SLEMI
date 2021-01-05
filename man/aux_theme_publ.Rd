@@ -14,7 +14,7 @@ aux_theme_publ(base_size = 12, base_family = "sans", version = 1)
 \item{version}{integer that changes the characteristic of the plot, values 1,2 and 3 accepted.}
 }
 \description{
-Internal, auxillary functions
+Internal, auxiliary functions
 }
 \details{
 This function changes the theme of plots created with the use of ggplot package

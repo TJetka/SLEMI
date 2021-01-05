@@ -1,8 +1,8 @@
-#' Examplary data set I
+#' Exemplary data set I
 #'
-#' A dataset describing simple one dimensional intput - one dimensional output channel 
+#' A dataset describing simple one dimensional input - one dimensional output channel 
 #' with 500 observations per input. In addition, each observation is assigned to one of three types
-#' that occurs with propensities (0.6,0.3,0.1), resepctively. 
+#' that occurs with propensities (0.6,0.3,0.1), respectively 
 #' Conditional output distributions are Gaussian.
 #' 
 #' @format A data frame with 1500 rows and 3 variables:
@@ -15,7 +15,7 @@
 #' @keywords internal
 "data_example1"
 
-#' Examplary data set II
+#' Exemplary data set II
 #'
 #' A dataset describing a channel with 3 possible inputs and 3-dimensional output
 #' with 500 observations per input.
@@ -36,7 +36,7 @@
 #' Data from experiment with NFkB pathway
 #'
 #' In the paper describing methodological aspects of our algorithm we present the analysis of information transmission 
-#' in NfkB pathway upn the stimulation of TNF-\eqn{\alpha}. Experimental data from this experiment in the form of single-cell 
+#' in NfkB pathway upon the stimulation of TNF-\eqn{\alpha}. Experimental data from this experiment in the form of single-cell 
 #' time series are attached to the package as a data.frame object and can be accessed using `data_nfkb` variable.
 
 #' Each row of `data_nfkb` represents a single observation of a cell. Column 'signal' indicates the level of TNF-\eqn{\alpha}

@@ -1,6 +1,6 @@
 #'  Initial verification and transformation of input variable
 #' 
-#' Internal, auxillary functions
+#' Internal, auxiliary functions
 #'
 #' @param data is a data.frame
 #' @param signal is a character that indicates columns of data that include the labels of input

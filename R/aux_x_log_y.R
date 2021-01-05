@@ -1,6 +1,6 @@
 #' Calculation of expression \eqn{x\cdot \log y}
 #' 
-#' Internal, auxillary functions
+#' Internal, auxiliary functions
 #'
 #' @param x is a numeric vector
 #' @param y is a numeric vector (the same length of x)

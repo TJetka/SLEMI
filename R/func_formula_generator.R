@@ -1,6 +1,6 @@
 #' Formula generator for logistic regression algorithm
 #' 
-#' Internal, auxillary functions
+#' Internal, auxiliary functions
 #'
 #' @param signal is a character object that indicates columns of data to be treated as channel's input
 #' @param response is a character vector that indicates columns of data to be treated as channel's output

@@ -16,7 +16,7 @@ Function calculates the value of expression \eqn{x\cdot \log y} element-wise in 
 The result is a numeric vector of the same length as x. It is assumed that \eqn{0\cdot \log 0 = 0}.
 }
 \description{
-Internal, auxillary functions
+Internal, auxiliary functions
 }
 \examples{
 SLEMI:::aux_x_log_y(1,2)

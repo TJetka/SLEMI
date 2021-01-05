@@ -12,6 +12,9 @@ on:
 
 name: R-CMD-check
 
+env:
+  cache-version: v2
+
 jobs:
   R-CMD-check:
     runs-on: ${{ matrix.config.os }}

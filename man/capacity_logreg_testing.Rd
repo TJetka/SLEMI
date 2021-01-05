@@ -31,7 +31,7 @@ capacity_logreg_testing(
 
 \item{side_variables}{(optional) is a character vector that indicates side variables' columns of data, if NULL no side variables are included}
 
-\item{cc_maxit}{is the number of iteration of iterative optimisation of the algorithm to esimate channel capacity. Default is 100.}
+\item{cc_maxit}{is the number of iteration of iterative optimisation of the algorithm to estimate channel capacity. Default is 100.}
 
 \item{lr_maxit}{is a maximum number of iteration of fitting algorithm of logistic regression. Default is 1000.}
 
@@ -65,13 +65,13 @@ a list with four elements:
 Each of above is a list, where an element is an output of a single repetition of the channel capacity algorithm
 }
 \description{
-Diagnostic procedures that allows to compute the uncertainity of estimation of channel capacity by SLEMI approach. Two main procedures are implemented:
-bootstrap, which execute estimation with using a fraction of data and overfitting test, which dividies data into two parts: training and testing. Each of them
+Diagnostic procedures that allows to compute the  uncertainty of estimation of channel capacity by SLEMI approach. Two main procedures are implemented:
+bootstrap, which execute estimation with using a fraction of data and overfitting test, which divides data into two parts: training and testing. Each of them
 is repeated specified number of times to obtain a distribution of our estimators. It is recommended to conduct estimation by calling capacity_logreg_main.R.
 }
 \details{
 If side variables are added within the analysis (side_variables is not NULL), two additional procedures are carried out:
-reshuffling test and reshuffling with boostrap test, which are based on permutation of side variables values within the dataset.  
+reshuffling test and reshuffling with bootstrap test, which are based on permutation of side variables values within the dataset.  
 Additional parameters: lr_maxit and maxNWts are the same as in definition of multinom function from nnet package. An alternative
 model formula (using formula_string arguments) should be provided if  data are not suitable for description by logistic regression
 (recommended only for advanced users).

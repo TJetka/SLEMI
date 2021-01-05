@@ -16,10 +16,10 @@ func_input_checks(data, signal, response, side_variables)
 \item{side_variables}{is a character vector that indicates side variables' columns of data}
 }
 \value{
-If all initial data is valid, string "ok" is retured. Otherwise, error is given.
+If all initial data is valid, string "ok" is returned. Otherwise, error is given.
 }
 \description{
-Internal, auxillary functions
+Internal, auxiliary functions
 }
 \examples{
 data=data_example1

@@ -25,7 +25,7 @@ mi_logreg_algorithm(
 
 \item{side_variables}{(optional) is a character vector that indicates side variables' columns of data, if NULL no side variables are included}
 
-\item{pinput}{is a numeric vector with piror probabilities of the input values. Uniform distribution is assumed as default (pinput=NULL).}
+\item{pinput}{is a numeric vector with prior probabilities of the input values. Uniform distribution is assumed as default (pinput=NULL).}
 
 \item{formula_string}{(optional) is a character object that includes a formula syntax to use in logistic regression model. 
 If NULL, a standard additive model of response variables is assumed. Only for advanced users.}
@@ -34,7 +34,7 @@ If NULL, a standard additive model of response variables is assumed. Only for ad
 
 \item{MaxNWts}{is a maximum acceptable number of weights in logistic regression algorithm. Default is 5000.}
 
-\item{model_out}{is the logical indicating if the calculated logisitc regression model should be included in output list}
+\item{model_out}{is the logical indicating if the calculated logistic regression model should be included in output list}
 }
 \value{
 a list with three elements:

@@ -21,7 +21,7 @@ func_formula_generator(
 A character object that includes a standard formula syntax to use in algorithm for capacity calculation
 }
 \description{
-Internal, auxillary functions
+Internal, auxiliary functions
 }
 \examples{
 SLEMI:::func_formula_generator(signal="signal",response="response", side_variables=NULL)

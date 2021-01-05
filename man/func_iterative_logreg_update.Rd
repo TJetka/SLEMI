@@ -7,7 +7,7 @@
 func_iterative_logreg_update(prob_lr, p0, cell_id, signal_levels, cc_maxit)
 }
 \arguments{
-\item{prob_lr}{is a matrix of class probabilties for each observation}
+\item{prob_lr}{is a matrix of class probabilities for each observation}
 
 \item{p0}{is a numeric vector of prior probabilities used for logistic regression estimation}
 
@@ -25,6 +25,6 @@ A list with components
 }
 }
 \description{
-Internal, auxillary functions
+Internal, auxiliary functions
 }
 \keyword{internal}

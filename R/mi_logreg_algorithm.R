@@ -14,12 +14,12 @@
 #' @param signal is a character object with names of columns of dataRaw to be treated as channel's input.
 #' @param response is a character vector with names of columns of dataRaw  to be treated as channel's output
 #' @param side_variables (optional) is a character vector that indicates side variables' columns of data, if NULL no side variables are included
-#' @param pinput is a numeric vector with piror probabilities of the input values. Uniform distribution is assumed as default (pinput=NULL).
+#' @param pinput is a numeric vector with prior probabilities of the input values. Uniform distribution is assumed as default (pinput=NULL).
 #' @param formula_string (optional) is a character object that includes a formula syntax to use in logistic regression model. 
 #' If NULL, a standard additive model of response variables is assumed. Only for advanced users.
 #' @param lr_maxit is a maximum number of iteration of fitting algorithm of logistic regression. Default is 1000.
 #' @param MaxNWts is a maximum acceptable number of weights in logistic regression algorithm. Default is 5000.
-#' @param model_out is the logical indicating if the calculated logisitc regression model should be included in output list
+#' @param model_out is the logical indicating if the calculated logistic regression model should be included in output list
 #' @export
 #' @return a list with three elements:
 #' \itemize{

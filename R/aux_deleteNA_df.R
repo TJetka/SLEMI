@@ -1,6 +1,6 @@
 #' Removing NAs observations from a data frame
 #' 
-#' Internal, auxillary functions
+#' Internal, auxiliary functions
 #'
 #' @param data is a data.frame object
 #' @return a data.frame object with the same structure as data and no observation with missing (NA) values

@@ -1,12 +1,12 @@
 #' Initial verification of input
 #' 
-#' Internal, auxillary functions
+#' Internal, auxiliary functions
 #' 
 #' @param data is an input object that should be a data.frame
 #' @param signal is a character object that indicates input columns of data
 #' @param response is a character vector that indicates output's columns of data
 #' @param side_variables is a character vector that indicates side variables' columns of data
-#' @return If all initial data is valid, string "ok" is retured. Otherwise, error is given.
+#' @return If all initial data is valid, string "ok" is returned. Otherwise, error is given.
 #' @keywords internal
 #' @examples 
 #' data=data_example1

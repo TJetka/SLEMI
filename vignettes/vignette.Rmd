@@ -126,7 +126,7 @@ For visualization, a set of graphs is created by an internal function `capacity_
 
 **The function `mi_logreg_main()`** serves to calculate the mutual information. It initiates similar steps as the function `capacity_logreg_main()` but without performing the optimization of the distribution of the input. Instead, it requires the input distribution to be specified by the user as a function's argument. 
 
-Logistic regression and Monte Carlo methods, following an analogous algorithm as within the `capacity_logreg_algorithm()` function, are combined to estimate mutual information within a function `mi_logreg_algorithm()`. Visualisation and diagnostics are carried out by the same set of auxillary functions as for channel capacity (internal functions `capacity_output_graphs()` and `capacity_logreg_testing()`). 
+Logistic regression and Monte Carlo methods, following an analogous algorithm as within the `capacity_logreg_algorithm()` function, are combined to estimate mutual information within a function `mi_logreg_algorithm()`. Visualisation and diagnostics are carried out by the same set of auxiliary functions as for channel capacity (internal functions `capacity_output_graphs()` and `capacity_logreg_testing()`). 
 
 
 **The `prob_discr_pairwise()`** allows to estimate probabilities of correct discrimination between two different values of the input. It implements estimation of probabilities of correct classification by logistic regression (from `nnet` package) for each pair of input values. The probabilities of correct discrimination are visualized with a graph composed of pie charts.
@@ -146,7 +146,7 @@ knitr::include_graphics("plot_scheme.pdf")
 
  SLEMI package is designed to estimate information-theoretic measures between a discrete-valued input, $X$, and multivariate, continuous output, $Y$.  In a typical experiment aimed to quantify information flow a given signaling system, input values $x_1\leq x_2 \ldots... \leq x_m$, ranging from 0 to saturation are considered.
  
- Then, for each input level, $x_i$,$n_i$ observations are collected, which are represetned as vectors 
+ Then, for each input level, $x_i$,$n_i$ observations are collected, which are represented as vectors 
  $$y^i_j \sim P(Y|X = x_i)$$
  Within information theory the degree of information transmission is measured as the mutual information
  $$MI(X,Y) = \sum_{i=1}^{m} P(x_i)\int_{R^k} P(y|X = x_i)log_2\frac{P(y|X = x_i)}{P(y)}dy$$
@@ -158,7 +158,7 @@ knitr::include_graphics("plot_scheme.pdf")
 
 ## Input data
 
-Functions  `mi_logreg_main()`, `capacity_logreg_main()`,  `prob_discr_pairwise()` require data in the form of the object `data.frame` with a specifc structure of rows and columns. Responses $y^i_j$ are assumed to be measured for a finite set of stimuli levels $x_1,x_2,\ldots,x_m$. The responses $y^i_j$ can be multidimensional. Usually, experimental dataset is represented as a table with rows and columns organized as shown in Figure 2.
+Functions  `mi_logreg_main()`, `capacity_logreg_main()`,  `prob_discr_pairwise()` require data in the form of the object `data.frame` with a specific structure of rows and columns. Responses $y^i_j$ are assumed to be measured for a finite set of stimuli levels $x_1,x_2,\ldots,x_m$. The responses $y^i_j$ can be multidimensional. Usually, experimental dataset is represented as a table with rows and columns organized as shown in Figure 2.
 
 Therefore, the input data frame is expected to have the form represented by the above table, which can be formally described by the following conditions
 
@@ -208,7 +208,7 @@ rbind(data_nfkb[1:3,1:4],data_nfkb[10001:10003,1:4],tail(data_nfkb[,1:4],3))
 \clearpage
 
 ## Calculation of the information capacity 
-Calculation of the information capacity with default settings is perfomed by the command
+Calculation of the information capacity with default settings is performed by the command
 
 ```c
 capacity_logreg_main(dataRaw, signal, response, output_path)
@@ -267,16 +267,16 @@ In addition, a plot of corresponding pie charts is created in `output_path` in t
 # Diagnostic procedures
 
 In addition to the sole calculation of the information capacity, the function `capacity_logreg_main()` can also be used to asses accuracy of the channel capacity estimates
-resulting from potentially insuffecient sample size and potential over-fitting of the regression model. Two test are implemented. Precisely, the function can perfom
+resulting from potentially insufficient sample size and potential over-fitting of the regression model. Two test are implemented. Precisely, the function can perform
 
 1. Bootstrap test - capacity is re-calculated using $\alpha$% of data, sampled from the original dataset without replacement. After repeating the procedure $n$ times, standard deviation of the obtained sample can serve as an error of the capacity estimate.
 2. Over-fitting test - the original data is divided into Training and Testing datasets. Then, logistic regression is estimated using $\alpha$% of data (training dataset), and integrals of channel capacity are calculated via Monte Carlo using remaining $(1-\alpha)$% of data (testing dataset). It is repeated $n$ times.
 
-In order to perform diagostic tests, that by default are turned off,  user must set the value of the input argument   
+In order to perform diagnostic tests, that by default are turned off,  user must set the value of the input argument   
 
 * testing = TRUE (default=FALSE) 
 
-In addition, settings of the diagnostic test can be altered by changing the following paramaters
+In addition, settings of the diagnostic test can be altered by changing the following parameters
 
 * TestingSeed (default= 1234) - the seed for the random number generator used to sample original dataset,
 * testing_cores (default= 4) - a number of cores to use (via `doParallel` package) in parallel computing, 
@@ -287,7 +287,7 @@ In addition, settings of the diagnostic test can be altered by changing the foll
 
 
 # Additional functionalities of the function `capacity_logreg_main()`
-In addition, to the basic functionalities described above, the function `capacity_logreg_main()` allows to control several other paramters of the alorithm that computes the information capacity. These parameters and their effects are listed below. 
+In addition, to the basic functionalities described above, the function `capacity_logreg_main()` allows to control several other parameters of the algorithm that computes the information capacity. These parameters and their effects are listed below. 
 
 
 * `model_out` (`default=TRUE`) - logical, specify if `nnet` model object should be saved into output file
@@ -344,7 +344,7 @@ knitr::kable(rbind(tempdata[1:2,],tempdata[2001:2002,],tail(tempdata,2)))
 
 **Calculation of the information capacity**
 
-The Information capacit can be calculated using the  `capacity_logreg_main()` function that takes the data frame "tempdata"  as `dataRaw` argument. Column names "input" and "output" are used as arguments `signal` and `response`, respectively. The `output_path` is set as "minimal_example/". Therefore, the function is run as follows
+The Information capacity can be calculated using the  `capacity_logreg_main()` function that takes the data frame "tempdata"  as `dataRaw` argument. Column names "input" and "output" are used as arguments `signal` and `response`, respectively. The `output_path` is set as "minimal_example/". Therefore, the function is run as follows
         
 ```c                   
 tempoutput  <- capacity_logreg_main(dataRaw=tempdata, 

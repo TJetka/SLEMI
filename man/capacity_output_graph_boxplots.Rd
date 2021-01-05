@@ -5,7 +5,7 @@
 \alias{capacity_output_graph_violinMean}
 \alias{capacity_output_graph_boxplotsSideVar}
 \alias{capacity_output_graph_capacity}
-\title{Plotting output of capacity estimation. Auxillary functions.}
+\title{Plotting output of capacity estimation. Auxiliary functions.}
 \usage{
 capacity_output_graph_boxplots(
   data,

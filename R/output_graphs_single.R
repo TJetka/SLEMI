@@ -1,4 +1,4 @@
-#' Plotting output of capacity estimation. Auxillary functions.
+#' Plotting output of capacity estimation. Auxiliary functions.
 #' 
 #' INPUT:
 #' @param data is a data.frame object

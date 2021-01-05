@@ -17,7 +17,7 @@ sampling_partition(data, dataDiv, partition_trainfrac)
 
 \item{prob}{is numeric for the portion of data that should be sampled from the whole dataset (only in sampling_bootstrap)}
 
-\item{dataDiv}{a character indicating column of data, with respect to which, data should be splitte before bootstrap}
+\item{dataDiv}{a character indicating column of data, with respect to which, data should be splitted before bootstrap}
 
 \item{side_variables}{is a vector of characters indicating columns of data the will be reshuffled (only in sampling_shuffle)}
 
@@ -27,10 +27,10 @@ sampling_partition(data, dataDiv, partition_trainfrac)
 Function sampling_bootstrap returns a data.frame with the same structure as initial data object, but with prob proportion
 of observations for each dataDiv level. Function sampling_shuffle returns a data.frame with the same structure as initial data object with 
 shuffled values of columns given in side_variables argument. Function sampling_partition returns a list of two data.frame objects - 
-train and test that has the same structure as initial data argument with partition_trainfrac and 1-partition_trainfrac observations, resepctively.
+train and test that has the same structure as initial data argument with partition_trainfrac and 1-partition_trainfrac observations, respectively.
 }
 \description{
-Internal, auxillary functions
+Internal, auxiliary functions
 }
 \details{
 These function allow to re-sample, bootstrap and divide initial dataset

@@ -17,7 +17,7 @@ If signal has been numeric initially, additional column is created "signal_RAW" 
 copy of original column
 }
 \description{
-Internal, auxillary functions
+Internal, auxiliary functions
 }
 \examples{
 data=data_example1

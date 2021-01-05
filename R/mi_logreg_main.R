@@ -1,4 +1,4 @@
-#' Estimate mutual information between discrete input and continuouse output
+#' Estimate mutual information between discrete input and continuous output
 #'
 #' The main wrapping function for basic usage of SLEMI package for estimation of mutual information. Firstly, data is pre-processed
 #' (all arguments are checked, observation with NAs are removed, variables are scaled and centered (if scale=TRUE)). Then basic estimation is carried out
@@ -6,7 +6,7 @@
 #' are saved there, together with a compressed output object (as .rds file) with full estimation results.
 #'
 #' In a typical experiment aimed to quantify information flow a given signaling system, input values \eqn{x_1\leq x_2 \ldots... \leq x_m}, ranging from 0 to saturation are considered.
-#' Then, for each input level, \eqn{x_i}, \eqn{n_i} observations are collected, which are represetned as vectors 
+#' Then, for each input level, \eqn{x_i}, \eqn{n_i} observations are collected, which are represented as vectors 
 #' \deqn{y^i_j \sim P(Y|X = x_i)}
 #' Within information theory the degree of information transmission is measured as the mutual information
 #' \deqn{MI(X,Y) = \sum_{i=1}^{m} P(x_i)\int_{R^k} P(y|X = x_i)log_2\frac{P(y|X = x_i)}{P(y)}dy,}
@@ -39,14 +39,14 @@
 #' @param response is a character vector with names of columns of dataRaw  to be treated as channel's output
 #' @param output_path is the directory in which output will be saved
 #' @param side_variables (optional) is a character vector that indicates side variables' columns of data, if NULL no side variables are included
-#' @param pinput is a numeric vector with piror probabilities of the input values. Uniform distribution is assumed as default (pinput=NULL).
+#' @param pinput is a numeric vector with prior probabilities of the input values. Uniform distribution is assumed as default (pinput=NULL).
 #' @param formula_string (optional) is a character object that includes a formula syntax to use in logistic regression model. 
 #' If NULL, a standard additive model of response variables is assumed. Only for advanced users.
 #' @param lr_maxit is a maximum number of iteration of fitting algorithm of logistic regression. Default is 1000.
 #' @param MaxNWts is a maximum acceptable number of weights in logistic regression algorithm. Default is 5000.
-#' @param plot_height - the basic dimnesions (height) of plots, in inches
-#' @param plot_width - the basic dimnesions (width) of plots, in inches
-#' @param model_out is the logical indicating if the calculated logisitc regression model should be included in output list
+#' @param plot_height -  basic dimensions (height) of plots, in inches
+#' @param plot_width -  basic dimensions (width) of plots, in inches
+#' @param model_out is the logical indicating if the calculated logistic regression model should be included in output list
 #' @param data_out  is the logical indicating if the data should be included in output list
 #' @param scale is a logical indicating if the response variables should be scaled and centered before fitting logistic regression
 #' @param testing is the logical indicating if the testing procedures should be executed

@@ -1,11 +1,11 @@
 #' Testing procedures for estimation of mutual information
 #' 
-#' Diagnostic procedures that allows to compute the uncertainity of estimation of mutual information by SLEMI approach. Two main procedures are implemented:
-#' bootstrap, which execute estimation with using a fraction of data and overfitting test, which dividies data into two parts: training and testing. Each of them
+#' Diagnostic procedures that allows to compute the  uncertainty of estimation of mutual information by SLEMI approach. Two main procedures are implemented:
+#' bootstrap, which execute estimation with using a fraction of data and overfitting test, which divides data into two parts: training and testing. Each of them
 #' is repeated specified number of times to obtain a distribution of our estimators. It is recommended to call this function from mi_logreg_main.R.
 #'
 #' If side variables are added within the analysis (side_variables is not NULL), two additional procedures are carried out:
-#' reshuffling test and reshuffling with boostrap test, which are based on permutation of side variables values within the dataset.  
+#' reshuffling test and reshuffling with bootstrap test, which are based on permutation of side variables values within the dataset.  
 #' Additional parameters: lr_maxit and maxNWts are the same as in definition of multinom function from nnet package. An alternative
 #' model formula (using formula_string arguments) should be provided if  data are not suitable for description by logistic regression
 #' (recommended only for advanced users).
@@ -19,7 +19,7 @@
 #' @param signal is a character object with names of columns of dataRaw to be treated as channel's input.
 #' @param response is a character vector with names of columns of dataRaw  to be treated as channel's output
 #' @param side_variables (optional) is a character vector that indicates side variables' columns of data, if NULL no side variables are included
-#' @param pinput is a numeric vector with piror probabilities of the input values. Uniform distribution is assumed as default (pinput=NULL).
+#' @param pinput is a numeric vector with prior probabilities of the input values. Uniform distribution is assumed as default (pinput=NULL).
 #' @param formula_string (optional) is a character object that includes a formula syntax to use in logistic regression model. 
 #' If NULL, a standard additive model of response variables is assumed. Only for advanced users.
 #' @param lr_maxit is a maximum number of iteration of fitting algorithm of logistic regression. Default is 1000.
@@ -42,7 +42,7 @@
 #' Each of the above is a list, where an element is a standard output of a single mi_logreg_algorithm run.
 #' @export
 #' @examples 
-#' ## Compute uncertainity of mutual information estimator using 1 core
+#' ## Compute  uncertainty of mutual information estimator using 1 core
 #' ## Set boot_num and traintest_num with larger numbers for more reliable testing
 #' tempdata=data_example1
 #' output=mi_logreg_testing(data=tempdata,

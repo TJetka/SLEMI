@@ -3,7 +3,7 @@
 \docType{data}
 \name{data_example2}
 \alias{data_example2}
-\title{Examplary data set II}
+\title{Exemplary data set II}
 \format{
 A data frame with 1500 rows and 4 variables:
 \describe{

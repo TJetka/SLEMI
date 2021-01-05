@@ -13,7 +13,7 @@ aux_deleteNA_df(data)
 a data.frame object with the same structure as data and no observation with missing (NA) values
 }
 \description{
-Internal, auxillary functions
+Internal, auxiliary functions
 }
 \examples{
 df=data.frame(x=c(rnorm(10),NA,NA),y=c(NA,NA,rnorm(10)))
