@@ -1,5 +1,6 @@
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/TJetka/SLEMI/workflows/R-CMD-check/badge.svg)](https://github.com/TJetka/SLEMI/actions)
+[![Codecov test coverage](https://codecov.io/gh/TJetka/SLEMI/branch/master/graph/badge.svg)](https://codecov.io/gh/TJetka/SLEMI?branch=master)
 <!-- badges: end -->
 
 # Statistical Learning based Estimation of Mutual Information (SLEMI)

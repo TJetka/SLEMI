@@ -7,3 +7,4 @@
 ^old_vignettes$
 ^paper$
 ^tbd.md$
+^codecov\.yml$

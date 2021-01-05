@@ -12,6 +12,11 @@ BugReports: https://github.com/TJetka/SLEMI/issues
 Encoding: UTF-8
 LazyData: true
 Imports: e1071, ggplot2, ggthemes, gridExtra, nnet, Hmisc, reshape2, stringr, doParallel, caret, corrplot, foreach
-Suggests: knitr, rmarkdown,  testthat (>= 2.1.0), data.table
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat (>= 2.1.0),
+    data.table,
+    covr
 VignetteBuilder: knitr
 RoxygenNote: 7.1.1
