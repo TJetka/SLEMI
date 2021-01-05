@@ -17,7 +17,7 @@ sampling_partition(data, dataDiv, partition_trainfrac)
 
 \item{prob}{is numeric for the portion of data that should be sampled from the whole dataset (only in sampling_bootstrap)}
 
-\item{dataDiv}{a character indicating column of data, with respect to which, data should be splitted before bootstrap}
+\item{dataDiv}{a character indicating column of data, with respect to which, data should be split before bootstrap}
 
 \item{side_variables}{is a vector of characters indicating columns of data the will be reshuffled (only in sampling_shuffle)}
 

@@ -2,7 +2,7 @@
 % Please edit documentation in R/mi_logreg_main.R
 \name{mi_logreg_main}
 \alias{mi_logreg_main}
-\title{Estimate mutual information between discrete input and continuouse output}
+\title{Estimate mutual information between discrete input and continuous output}
 \usage{
 mi_logreg_main(
   dataRaw,

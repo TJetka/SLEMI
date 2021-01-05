@@ -2,7 +2,7 @@
 % Please edit documentation in R/capacity_logreg_main.R
 \name{capacity_logreg_main}
 \alias{capacity_logreg_main}
-\title{Estimate channel capacity between discrete input and continuouse output}
+\title{Estimate channel capacity between discrete input and continuous output}
 \usage{
 capacity_logreg_main(
   dataRaw,
