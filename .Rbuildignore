@@ -1,1 +1,9 @@
 ^data-raw$
+^\.travis\.yml$
+^\.github$
+^LICENSE\.md$
+^LICENSE$
+^SLEMI_1.00.190918.pdf$
+^old_vignettes$
+^paper$
+^tbd.md$
