@@ -1,6 +1,6 @@
 <!-- badges: start -->
-<!--[![CRAN
-status](https://www.r-pkg.org/badges/version/SLEMI)](https://cran.r-project.org/package=SLEMI)-->
+[![CRAN
+status](https://www.r-pkg.org/badges/version/SLEMI)](https://cran.r-project.org/package=SLEMI)
 [![R-CMD-check](https://github.com/TJetka/SLEMI/workflows/R-CMD-check/badge.svg)](https://github.com/TJetka/SLEMI/actions)
 [![Codecov test coverage](https://codecov.io/gh/TJetka/SLEMI/branch/master/graph/badge.svg)](https://codecov.io/gh/TJetka/SLEMI?branch=master)
 <!-- badges: end -->
