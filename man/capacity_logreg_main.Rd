@@ -141,13 +141,13 @@ Information-theoretic analysis of multivariate single-cell signaling responses u
 \examples{
 tempdata=data_example1
 outputCLR1=capacity_logreg_main(dataRaw=tempdata,
-signal="signal", response="response",
+signal="signal", response="response",cc_maxit = 10,
 formula_string = "signal~response")
 
 tempdata=data_example2
 outputCLR2=capacity_logreg_main(dataRaw=tempdata,
-signal="signal", response=c("X1","X2","X3"),
-formula_string = "signal~X1+X2+X3") 
+signal="signal", response=c("X1","X2"),cc_maxit = 10,
+formula_string = "signal~X1+X2") 
 
 #For further details see vignette
 }

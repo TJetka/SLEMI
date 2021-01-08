@@ -4,7 +4,9 @@
 ^LICENSE\.md$
 ^LICENSE$
 ^SLEMI_1.0.1.pdf$
+^SLEMI_1.0.1.tar.gz$
 ^old_vignettes$
 ^paper$
 ^tbd.md$
 ^codecov\.yml$
+^cran-comments\.md$

@@ -88,7 +88,7 @@ output=prob_discr_pairwise(dataRaw=data_example1,
                    response = "response")
 ## Calculate probabilities of discrimination for nfkb dataset
  it=21 # choose from 0, 3, 6, ..., 120 for measurements at other time points
- output=prob_discr_pairwise(dataRaw=data_nfkb,
+ output=prob_discr_pairwise(dataRaw=data_nfkb[data_nfkb$signal\%in\%c("0ng","1ng","100ng"),],
                             signal = "signal",
                            response = paste0("response_",it))
 
