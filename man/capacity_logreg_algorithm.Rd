@@ -58,8 +58,9 @@ Information-theoretic analysis of multivariate single-cell signaling responses u
 }
 
 \examples{
-outputCLR1=capacity_logreg_algorithm(data=data_example1, signal="signal",
-response="response",cc_maxit=5,model_out=FALSE,
+tempdata=data_example1 
+outputCLR1=capacity_logreg_algorithm(data=tempdata, signal="signal",
+response="response",cc_maxit=3,model_out=FALSE,
 formula_string = "signal~response")
 
 }
