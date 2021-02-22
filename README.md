@@ -13,7 +13,7 @@ status](https://www.r-pkg.org/badges/version/SLEMI)](https://cran.r-project.org/
   + 1GHz processor (recommended: multicore for a comprehensive analysis)
   + 2GB MB RAM (recommended: 4GB+, depends on the size of experimental data)
  ### Requirements - Software
-The main software requirement is the installation of the R environment (version: >= 3.6), which can be downloaded from [R project website](https://www.r-project.org) and is distributed for all common operating systems.  We tested the package in R environment installed on Windows 7, 10; Mac OS X 10.11 - 10.13 and Ubuntu 18.04 with no significant differences in the performance. The use of a dedicated Integrated development environment (IDE), e.g. [RStudio](https://www.rstudio.com) is recommended. 
+The main software requirement is the installation of the R environment (version: >= 3.6), which can be downloaded from [R project website](https://www.r-project.org) and is distributed for all common operating systems.  We tested the package in R environment installed on Windows 7, 10; Mac OS X 10.11 - 10.13 and Ubuntu 18.04 with no significant differences in the performance. The use of a dedicated Integrated development environment (IDE), e.g. [RStudio](https://rstudio.com) is recommended. 
  Apart from base installation of R, SLEMI requires following packages:
  1. for installation 
    + devtools
