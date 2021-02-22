@@ -17,8 +17,11 @@ Repaired consistency with ggplot2.
 Status: OK
 
 ### win-builder devel
+Installation time in seconds: 11
+Check time in seconds: 183
 Status: OK
-log files: https://win-builder.r-project.org/N9DlFs0d9DvM
+R Under development (unstable) (2021-02-20 r80030)
+log files: https://win-builder.r-project.org/eOay5h9U24C0
 
 ### R-hub check results
 -- SLEMI 1.0.1: OK
