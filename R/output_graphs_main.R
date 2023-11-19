@@ -6,7 +6,7 @@
 #' @param response is a character vector that indicates columns of data that should be treated as channel's output
 #' @param side_variables is a character vector that indicates side variables' columns of data
 #' @param cc_output a list that is a standard output of capacity_logreg_algorithm function
-#' @param path character giving the directory, where graphs should be saved
+#' @param output_path character giving the directory, where graphs should be saved
 #' @param height integer indicating the height of a single plot
 #' @param width integer indicating the width of a single plot
 #' @return A list with ggplot or gtable object. Each plot is also saved in `output_path` directory in separate pdfs files which include:

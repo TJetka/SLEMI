@@ -26,11 +26,11 @@ output_graphs_main(
 
 \item{cc_output}{a list that is a standard output of capacity_logreg_algorithm function}
 
+\item{output_path}{character giving the directory, where graphs should be saved}
+
 \item{height}{integer indicating the height of a single plot}
 
 \item{width}{integer indicating the width of a single plot}
-
-\item{path}{character giving the directory, where graphs should be saved}
 }
 \value{
 A list with ggplot or gtable object. Each plot is also saved in `output_path` directory in separate pdfs files which include:
