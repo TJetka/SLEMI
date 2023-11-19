@@ -1,0 +1,21 @@
+version: '3'
+
+env:
+  project_name: r-slemi
+  working_dir: '{{.USER_WORKING_DIR}}'
+
+tasks:
+  build:
+    cmds:
+      - docker build -t $project_name envs/
+  prune:
+    preconditions:
+      - test -f envs/docker-compose.yml
+    cmds:
+      - docker compose -f envs/docker-compose.yml stop
+      - docker compose -f envs/docker-compose.yml rm
+  up:
+    preconditions:
+      - test -f envs/docker-compose.yml
+    cmds:
+      - docker compose -f envs/docker-compose.yml up -d

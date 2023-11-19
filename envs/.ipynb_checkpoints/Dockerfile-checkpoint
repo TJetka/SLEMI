@@ -1,0 +1,21 @@
+FROM jupyter/datascience-notebook:python-3.11.4
+
+WORKDIR /opt/
+
+RUN echo "c.ServerApp.password='sha1:b585cbda7b0f:c90bdb119d5b67f31265d9b05d4f8d0a937a3f13'">>/home/jovyan/.jupyter/jupyter_server_config.py
+
+USER root
+RUN apt-get update --yes && \
+    apt-get install --yes --no-install-recommends \
+    graphviz graphviz-dev
+USER ${NB_UID}
+
+COPY requirements_cf.txt  /opt/
+RUN mamba install -c conda-forge --yes --file requirements_cf.txt 
+RUN mamba install -c plotly plotly=5.16.1 
+
+
+RUN mamba clean --all -f -y && \
+   fix-permissions "${CONDA_DIR}" && \
+   fix-permissions "/home/${NB_USER}"
+

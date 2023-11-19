@@ -1,0 +1,14 @@
+r-e1071
+r-ggplot2
+r-gridExtra
+r-nnet
+r-Hmisc=5.1.1
+r-reshape2
+r-stringr
+r-doparallel=1.0.17
+r-caret
+r-corrplot=0.92
+r-foreach
+r-qpdf=1.3.2
+r-covr=3.6.4
+r-rhub=1.1.2
