@@ -35,6 +35,8 @@ mi_logreg_testing(
 
 \item{lr_maxit}{is a maximum number of iteration of fitting algorithm of logistic regression. Default is 1000.}
 
+\item{MaxNWts}{is a maximum acceptable number of weights in logistic regression algorithm. Default is 5000.}
+
 \item{formula_string}{(optional) is a character object that includes a formula syntax to use in logistic regression model. 
 If NULL, a standard additive model of response variables is assumed. Only for advanced users.}
 
@@ -51,8 +53,6 @@ If NULL, a standard additive model of response variables is assumed. Only for ad
 \item{traintest_num}{is the number of overfitting tests to be performed. Default is 10, but it is recommended to use at least 50 for reliable estimates.}
 
 \item{partition_trainfrac}{is the fraction of data to be used as a training dataset}
-
-\item{maxNWts}{is a maximum acceptable number of weights in logistic regression algorithm. Default is 5000.}
 }
 \value{
 a list with elements:
@@ -72,7 +72,7 @@ is repeated specified number of times to obtain a distribution of our estimators
 \details{
 If side variables are added within the analysis (side_variables is not NULL), two additional procedures are carried out:
 reshuffling test and reshuffling with bootstrap test, which are based on permutation of side variables values within the dataset.  
-Additional parameters: lr_maxit and maxNWts are the same as in definition of multinom function from nnet package. An alternative
+Additional parameters: lr_maxit and MaxNWts are the same as in definition of multinom function from nnet package. An alternative
 model formula (using formula_string arguments) should be provided if  data are not suitable for description by logistic regression
 (recommended only for advanced users).
 }

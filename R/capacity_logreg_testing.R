@@ -6,7 +6,7 @@
 #'
 #' If side variables are added within the analysis (side_variables is not NULL), two additional procedures are carried out:
 #' reshuffling test and reshuffling with bootstrap test, which are based on permutation of side variables values within the dataset.  
-#' Additional parameters: lr_maxit and maxNWts are the same as in definition of multinom function from nnet package. An alternative
+#' Additional parameters: lr_maxit and MaxNWts are the same as in definition of multinom function from nnet package. An alternative
 #' model formula (using formula_string arguments) should be provided if  data are not suitable for description by logistic regression
 #' (recommended only for advanced users).
 #'
@@ -23,7 +23,7 @@
 #' If NULL, a standard additive model of response variables is assumed. Only for advanced users.
 #' @param cc_maxit is the number of iteration of iterative optimisation of the algorithm to estimate channel capacity. Default is 100.
 #' @param lr_maxit is a maximum number of iteration of fitting algorithm of logistic regression. Default is 1000.
-#' @param maxNWts is a maximum acceptable number of weights in logistic regression algorithm. Default is 5000.
+#' @param MaxNWts is a maximum acceptable number of weights in logistic regression algorithm. Default is 5000.
 #' @param TestingSeed is the seed for random number generator used in testing procedures
 #' @param boot_num is the number of bootstrap tests to be performed. Default is 10, but it is recommended to use at least 50 for reliable estimates.
 #' @param boot_prob is the proportion of initial size of data to be used in bootstrap. Default is 0.8.
