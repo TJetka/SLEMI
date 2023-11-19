@@ -1,0 +1,14 @@
+services:
+  r-slemi:
+    image: $project_name
+    ports:
+      - "9072:8888"
+    user: root
+    environment:
+      NB_UID: 136800125
+      NB_GID: 136800125
+      NB_USER: tomasz_jetka
+      CHOWN_EXTRA: "/opt/"
+    volumes:
+      - $working_dir:/opt/work/
+
